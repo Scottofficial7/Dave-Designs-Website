@@ -1,0 +1,7 @@
+User-agent: Googlebot
+Disallow: /nogooglebot/
+
+User-agent: *
+Allow: /
+
+Sitemap: https://careful-avaricious-beaver-rs4dms.teleporthq.app/sitemap.xml

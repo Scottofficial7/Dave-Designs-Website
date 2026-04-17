@@ -1,0 +1,70 @@
+
+
+.graphic-design-portfolio-container1 {
+  width: 100%;
+  display: block;
+  min-height: 100vh;
+}
+ 
+.graphic-design-portfolio-thq-text-gradient-elm {
+  display: inline-block;
+  background: var(--text-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+ 
+.graphic-design-portfolio-container2 {
+  display: none;
+}
+ 
+.graphic-design-portfolio-container3 {
+  display: contents;
+}
+ 
+.graphic-design-portfolio-container4 {
+  right: 50px;
+  border: 1px solid #ffffff5c;
+  bottom: 30px;
+  display: flex;
+  z-index: 22;
+  position: fixed;
+  box-shadow: 5px 5px 10px 0px rgba(31, 31, 31, 0.4);
+  min-height: auto;
+  align-items: center;
+  padding-top: 8px;
+  padding-left: 12px;
+  border-radius: 8px;
+  padding-right: 12px;
+  padding-bottom: 8px;
+  backdrop-filter: blur(6px);
+  background-color: rgba(41, 41, 41, 0.41);
+}
+ 
+.graphic-design-portfolio-icon38 {
+  width: 24px;
+  margin-right: 4px;
+}
+ 
+.graphic-design-portfolio-text19 {
+  color: white;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+}
+
+ .navigation-link.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+}
+
+.navigation-overlay-link.active {
+  color: var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  width: 30%;
+}
+
+.gallery-container .gallery-card img {
+  background-size: cover;
+  margin-bottom: 30px;
+}
