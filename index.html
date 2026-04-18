@@ -846,89 +846,96 @@ const = { skills: [ , , ], passion: , render: () =&gt; () };</pre
             </div>
           </div>
         </section>
-        <section class="testimonials-carousel">
-          <div class="section-header-wrap">
-            <h2 class="section-title">Client Voices</h2>
-            <p class="section-subtitle">
-              Hear from those who transformed their digital presence with Dave
-              Designs.
-            </p>
+        <!-- ═══════════════════════════════════════════════
+     CLIENT VOICES — auto-scrolling marquee style
+     ═══════════════════════════════════════════════ -->
+<section class="cv2-section">
+  <div class="cv2-header">
+    <h2 class="section-title">Client Voices</h2>
+    <p class="section-subtitle">Hear from those who transformed their digital presence with Dave Designs.</p>
+  </div>
+
+  <div class="cv2-marquee-wrap">
+    <div class="cv2-marquee" id="cv2Marquee">
+
+      <!-- Original set -->
+      <div class="cv2-card">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"Dave transformed our outdated site into a high-converting machine. The design is breathtaking and the code is lightning fast."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">SJ</div>
+          <div>
+            <p class="cv2-name">Sarah Jenkins</p>
+            <p class="cv2-role">CEO, TechFlow</p>
           </div>
-          <div class="testimonial-outer">
-            <div id="testimonialTrack" class="testimonial-track">
-              <div class="testimonial-card">
-                <div class="quote-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14H17.017C15.3561 14 14.017 12.6609 14.017 11V8C14.017 6.33914 15.3561 5 17.017 5H20.017C21.6779 5 23.017 6.33914 23.017 8V11C23.017 12.6609 21.6779 14 20.017 14V16H21.017C22.1216 16 23.017 16.8954 23.017 18V21H14.017ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6V14H4C2.33914 14 1 12.6609 1 11V8C1 6.33914 2.33914 5 4 5H7C8.66086 5 10 6.33914 10 8V11C10 12.6609 8.66086 14 7 14V16H8C9.10457 16 10 16.8954 10 18V21H1ZM1 21H10V18H3V21ZM14.017 21H23.017V18H16.017V21Z"
-                    ></path>
-                  </svg>
-                </div>
-                <p class="section-content">
-                  "Dave transformed our outdated site into a high-converting
-                  machine. The design is breathtaking and the code is lightning
-                  fast."
-                </p>
-                <div class="client-info">
-                  <h4 class="section-subtitle">Sarah Jenkins</h4>
-                  <span class="client-role">CEO, TechFlow</span>
-                </div>
-              </div>
-              <div class="testimonial-card">
-                <div class="quote-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14H17.017C15.3561 14 14.017 12.6609 14.017 11V8C14.017 6.33914 15.3561 5 17.017 5H20.017C21.6779 5 23.017 6.33914 23.017 8V11C23.017 12.6609 21.6779 14 20.017 14V16H21.017C22.1216 16 23.017 16.8954 23.017 18V21H14.017ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6V14H4C2.33914 14 1 12.6609 1 11V8C1 6.33914 2.33914 5 4 5H7C8.66086 5 10 6.33914 10 8V11C10 12.6609 8.66086 14 7 14V16H8C9.10457 16 10 16.8954 10 18V21H1ZM1 21H10V18H3V21ZM14.017 21H23.017V18H16.017V21Z"
-                    ></path>
-                  </svg>
-                </div>
-                <p class="section-content">
-                  "The branding work exceeded all our expectations. Dave has a
-                  unique eye for detail that really sets his work apart."
-                </p>
-                <div class="client-info">
-                  <h4 class="section-subtitle">Marcus Thorne</h4>
-                  <span class="client-role">Founder, Vortex</span>
-                </div>
-              </div>
-              <div class="testimonial-card">
-                <div class="quote-icon">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      fill="currentColor"
-                      d="M14.017 21L14.017 18C14.017 16.8954 14.9124 16 16.017 16H19.017V14H17.017C15.3561 14 14.017 12.6609 14.017 11V8C14.017 6.33914 15.3561 5 17.017 5H20.017C21.6779 5 23.017 6.33914 23.017 8V11C23.017 12.6609 21.6779 14 20.017 14V16H21.017C22.1216 16 23.017 16.8954 23.017 18V21H14.017ZM1 21L1 18C1 16.8954 1.89543 16 3 16H6V14H4C2.33914 14 1 12.6609 1 11V8C1 6.33914 2.33914 5 4 5H7C8.66086 5 10 6.33914 10 8V11C10 12.6609 8.66086 14 7 14V16H8C9.10457 16 10 16.8954 10 18V21H1ZM1 21H10V18H3V21ZM14.017 21H23.017V18H16.017V21Z"
-                    ></path>
-                  </svg>
-                </div>
-                <p class="section-content">
-                  "Working with Dave Designs was a breeze. Professional,
-                  creative, and highly responsive throughout the whole process."
-                </p>
-                <div class="client-info">
-                  <h4 class="section-subtitle">Elena Rodriguez</h4>
-                  <span class="client-role">Marketing Director, Nova</span>
-                </div>
-              </div>
-            </div>
+        </div>
+      </div>
+
+      <div class="cv2-card">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"The branding work exceeded all our expectations. Dave has a unique eye for detail that really sets his work apart."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">MT</div>
+          <div>
+            <p class="cv2-name">Marcus Thorne</p>
+            <p class="cv2-role">Founder, Vortex</p>
           </div>
-        </section>
+        </div>
+      </div>
+
+      <div class="cv2-card">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"Working with Dave Designs was a breeze. Professional, creative, and highly responsive throughout the whole process."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">ER</div>
+          <div>
+            <p class="cv2-name">Elena Rodriguez</p>
+            <p class="cv2-role">Marketing Director, Nova</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Duplicate set for seamless loop -->
+      <div class="cv2-card" aria-hidden="true">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"Dave transformed our outdated site into a high-converting machine. The design is breathtaking and the code is lightning fast."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">SJ</div>
+          <div>
+            <p class="cv2-name">Sarah Jenkins</p>
+            <p class="cv2-role">CEO, TechFlow</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv2-card" aria-hidden="true">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"The branding work exceeded all our expectations. Dave has a unique eye for detail that really sets his work apart."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">MT</div>
+          <div>
+            <p class="cv2-name">Marcus Thorne</p>
+            <p class="cv2-role">Founder, Vortex</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv2-card" aria-hidden="true">
+        <div class="cv2-stars">★★★★★</div>
+        <p class="cv2-quote">"Working with Dave Designs was a breeze. Professional, creative, and highly responsive throughout the whole process."</p>
+        <div class="cv2-client">
+          <div class="cv2-avatar">ER</div>
+          <div>
+            <p class="cv2-name">Elena Rodriguez</p>
+            <p class="cv2-role">Marketing Director, Nova</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ══════════════════════════════════ END CLIENT VOICES ══ -->
         <!-- ═══════════════════════════════════════════════
      TEACHING / CLASSES SECTION  —  paste before the contact section
      ═══════════════════════════════════════════════ -->

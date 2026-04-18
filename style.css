@@ -2336,3 +2336,157 @@
     align-items: flex-start;
   }
 }
+
+/* ═══════════════════════════════════════════════════════
+   CLIENT VOICES v2 — continuous fast marquee
+   ═══════════════════════════════════════════════════════ */
+
+.cv2-section {
+  padding: 5rem 0;
+  overflow: hidden;
+}
+
+.cv2-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding: 0 1.5rem;
+}
+
+.cv2-header .section-subtitle {
+  margin-top: 0.5rem;
+}
+
+/* Mask edges to fade cards in/out */
+.cv2-marquee-wrap {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent 0%,
+    black 12%,
+    black 88%,
+    transparent 100%
+  );
+}
+
+/* The scrolling row */
+.cv2-marquee {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: cv2-scroll 18s linear infinite;
+}
+
+/* Pause on hover */
+.cv2-marquee:hover {
+  animation-play-state: paused;
+}
+
+@keyframes cv2-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Card */
+.cv2-card {
+  width: 340px;
+  flex-shrink: 0;
+  background: var(--color-surface-elevated, #111);
+  border: 1px solid var(--color-border, #262626);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.cv2-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--color-primary, #0066ff), var(--color-secondary, #c100c1));
+  border-radius: 16px 16px 0 0;
+}
+
+.cv2-card:hover {
+  border-color: color-mix(in srgb, var(--color-primary, #0066ff) 40%, transparent);
+  transform: translateY(-3px);
+}
+
+/* Stars */
+.cv2-stars {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  letter-spacing: 3px;
+}
+
+/* Quote */
+.cv2-quote {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--color-on-surface, #f2f9ff);
+  font-style: italic;
+  flex: 1;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-primary, #0066ff);
+}
+
+/* Client row */
+.cv2-client {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.cv2-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary, #0066ff), var(--color-secondary, #c100c1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.04em;
+  flex-shrink: 0;
+}
+
+.cv2-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-on-surface, #f2f9ff);
+  margin: 0;
+}
+
+.cv2-role {
+  font-size: 0.75rem;
+  color: var(--color-on-surface-secondary, #b7d8ff);
+  opacity: 0.7;
+  margin: 0;
+}
+
+/* Respect reduced-motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .cv2-marquee {
+    animation: none;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    padding: 0 1.5rem;
+  }
+  .cv2-card[aria-hidden="true"] {
+    display: none;
+  }
+}
