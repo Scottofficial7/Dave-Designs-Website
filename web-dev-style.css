@@ -1925,4 +1925,42 @@
   .card-img {
     transform: scale(1.05);
   }
+  .card-desc {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md);
+}
+}
+
+.project-card:hover .card-overlay {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .card-overlay {
+    transition: opacity 0.3s ease;
+  }
+
+  .card-overlay.active {
+    opacity: 1;
+  }
+  .card-desc {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+}
+
+@media (max-width: 768px) {
+  .card-overlay {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: translateY(0) !important;
+  }
+  .card-desc {
+  color: var(--color-on-surface);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md);
+}
 }

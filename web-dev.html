@@ -1279,6 +1279,19 @@
                   }
                 })()
               });
+                document.querySelectorAll('.project-card').forEach(card => {
+                 card.addEventListener('click', () => {
+                  // Close any other open overlays first
+                     document.querySelectorAll('.card-overlay.active').forEach(overlay => {
+                  if (overlay !== card.querySelector('.card-overlay')) {
+                   overlay.classList.remove('active');
+                     }
+                  });
+
+    // Toggle this card's overlay
+    card.querySelector('.card-overlay').classList.toggle('active');
+  });
+});
             </script>
           </div>
         </div>
