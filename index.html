@@ -53,6 +53,7 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     
   <body>
     <link rel="stylesheet" href="/style.css" />
@@ -948,7 +949,7 @@ const = { skills: [ , , ], passion: , render: () =&gt; () };</pre
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
           Now Accepting Students
         </span>
-        <h2 class="section-title">Learn Web Development<br><span class="teaching-highlight">Directly From Dave</span></h2>
+        <h2 class="section-title">Learn Web Dev.<br><span class="teaching-highlight">Directly From Dave</span></h2>
         <p class="section-content teaching-desc">
           Whether you're starting from zero or leveling up your skills, I offer structured, hands-on web development training — taught the way I actually build things.
         </p>
@@ -1546,5 +1547,20 @@ const = { skills: [ , , ], passion: , render: () =&gt; () };</pre
       
             
     </div>
+    
+
+<script>
+  emailjs.init("jk18QxcsBuJSqkqIk");
+
+  window.addEventListener("load", function () {
+    const now = new Date().toLocaleString();
+
+    emailjs.send("service_w58y64v", "template_6p1jxwe", {
+      visit_time: now,
+      page: window.location.href,
+      referrer: document.referrer || "Direct visit"
+    });
+  });
+</script>
   </body>
 </html>

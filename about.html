@@ -61,6 +61,8 @@
       href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&amp;display=swap"
       data-tag="font"
     />
+
+    
   </head>
   <body>
     <link rel="stylesheet" href="/style1.css" />
@@ -506,7 +508,7 @@
               <div class="intro-hero-visual">
                 <div class="intro-hero-image-container">
                   <img
-                    src=""
+                    src="Images/Graphics/dave_studio (1).jpg"
                     alt="Dave - Web Developer and Graphics Designer"
                     class="intro-hero-img"
                   />
@@ -935,14 +937,16 @@
                     skillObserver.observe(skillSection)
                   }
 
-                  // Simple Parallax for Hero Image
+                  /*// Simple Parallax for Hero Image
                   window.addEventListener("scroll", () => {
                     const heroImg = document.querySelector(".intro-hero-img")
                     if (heroImg) {
                       let scroll = window.pageYOffset
                       heroImg.style.transform = `translateY(${scroll * 0.1}px) scale(${1 + scroll * 0.0001})`
                     }
-                  })
+                  })*/
+
+                  // Parallax disabled — image crop takes priority
 
                   // Reveal animations for timeline items
                   const timelineItems = document.querySelectorAll(".timeline-item, .process-step")
